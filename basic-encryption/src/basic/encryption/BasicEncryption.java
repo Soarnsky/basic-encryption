@@ -4,6 +4,8 @@
  */
 package basic.encryption;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Kyle
@@ -15,8 +17,20 @@ public class BasicEncryption {
      */
     public static void main(String[] args) {
         
-        Encrypter encrypter;
-        Decrypter decrypter;
+        Encrypter encrypter = new Encrypter();
+        Decrypter decrypter = new Decrypter();
+        String userinput;
+        char[] encrypted;
+        
+        System.out.println("Enter message to be encoded:\n");
+        Scanner reader = new Scanner(System.in);
+        userinput = reader.nextLine();
+        
+        encrypted = encrypter.encrypt(userinput);
+        encrypter.display();
+        
+        decrypter.decrypt(encrypted);
+        decrypter.display();
     
     }
 }
