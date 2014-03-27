@@ -10,4 +10,11 @@ package basic.encryption;
  */
 public class Decrypter {
     
+    private char[] key;
+    
+    Decrypter()
+    {
+        key = Key.key;
+    }
+    
 }

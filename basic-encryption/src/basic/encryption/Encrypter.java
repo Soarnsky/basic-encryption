@@ -10,11 +10,13 @@ package basic.encryption;
  */
 public class Encrypter {
     
-    private char key;
+    private char[] key;
     
     Encrypter()
     {
-        
+        key = Key.key;
     }
+    
+    
     
 }
