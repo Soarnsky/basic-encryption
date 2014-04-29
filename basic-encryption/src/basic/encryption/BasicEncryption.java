@@ -17,19 +17,19 @@ public class BasicEncryption {
      */
     public static void main(String[] args) {
         
-        Encrypter encrypter = new Encrypter();
+        Enigma enigma = new Enigma();
         Decrypter decrypter = new Decrypter();
         String userinput;
-        char[] encrypted;
+        char[] encoded;
         
         System.out.println("Enter message to be encoded:\n");
         Scanner reader = new Scanner(System.in);
         userinput = reader.nextLine();
         
-        encrypted = encrypter.encrypt(userinput);
-        encrypter.display();
+        encoded = enigma.encode(userinput);
+        enigma.display();
         
-        decrypter.decrypt(encrypted);
+        decrypter.decrypt(encoded);
         decrypter.display();
     
     }

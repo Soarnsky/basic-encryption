@@ -13,7 +13,7 @@ public class Decrypter {
     private char[] alphabet;
     private char[] key;
     private int rotations;
-    private char[] decrypted;
+    private char[] decoded;
     
     Decrypter()
     {
@@ -21,32 +21,11 @@ public class Decrypter {
         alphabet = Key.alphabet;
     }
     
-    char[] decrypt(char[] encrypted)
-    {
-        int index;
-        decrypted = new char[encrypted.length];
-        
-        for(int i = encrypted.length-1; i >= 0; i--)
-        {
-            rotate();
-            if(encrypted[i]==' ')
-            {
-                decrypted[i] = ' ';
-            }
-            else
-            {
-                index = search(encrypted[i]);
-                decrypted[i] = alphabet[index];
-            }
-            
-        }
-//    
-        return decrypted;
-    }
+    
     
     void display()
     {
-        System.out.println(decrypted);
+        System.out.println(decoded);
     }
     
     void rotate()
